@@ -7,17 +7,8 @@ namespace LeetCode
 	{
 		static void Main(string[] args)
 		{
-			var twoSum = new TwoSumSolution();
-			int[] nums = { 3,2,4 };
-			var target = 6;
-
-			var x = twoSum.TwoSum(nums, target);
-
-			foreach (var y in x)
-			{
-				Console.WriteLine(y.ToString());
-			}
-
+			var x = new LengthOfLongestSubstringSolution();
+			Console.WriteLine(x.LengthOfLongestSubstring("abcabcbb"));
 			Console.ReadKey();
 		}
 	}
