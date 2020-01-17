@@ -27,10 +27,10 @@
 			}
 			ListNode result = new ListNode();
 
-			SumRecur(l1.next, l2.next, coef, );
+			SumRecur(l1.next, l2.next, result, coef);
 		}
 
-		public ListNode SumRecur(ListNode l1, ListNode l2, int coef)
+		public ListNode SumRecur(ListNode l1, ListNode l2, ListNode result, int coef)
 		{
 			if (l1 != null && l1 != null)
 			{
