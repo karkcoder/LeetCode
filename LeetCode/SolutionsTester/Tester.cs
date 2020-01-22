@@ -1,6 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Solutions;
-using System.Collections.Generic;
 
 namespace SolutionsTester
 {
@@ -21,10 +20,18 @@ namespace SolutionsTester
         [TestMethod]
         public void _3sumtester()
         {
-            var nums = new int[6] { -1, 0, 1, 2, -1, -4 };
+            var nums = new int[3] { 0, 0, 0 };
 
             var sut = new _3sum().ThreeSum(nums);
 
+        }
+
+        [TestMethod]
+        public void AddTwoNUmberTest()
+        {
+            ListNode listNode = new ListNode(2);
+            listNode.next = new ListNode(3);
+            listNode.next.next = new ListNode(4);
         }
     }
 }
