@@ -27,11 +27,18 @@ namespace SolutionsTester
         }
 
         [TestMethod]
-        public void AddTwoNUmberTest()
+        public void AddTwoNumberTest()
         {
             ListNode listNode = new ListNode(2);
             listNode.next = new ListNode(3);
             listNode.next.next = new ListNode(4);
+        }
+
+        [TestMethod]
+        public void StrStrTest()
+		{
+            StrStrSolution strtest = new StrStrSolution();
+            strtest.StrStr("aaaaabba", "bba");
         }
     }
 }
