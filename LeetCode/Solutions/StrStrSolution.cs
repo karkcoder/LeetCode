@@ -8,7 +8,7 @@ namespace Solutions
 	{
 		public int StrStr(string haystack, string needle)
 		{
-			if (haystack.Length == 0 || needle.Length == 0)
+			if (haystack.Length == 0 && needle.Length == 0)
 				return 0;
 
 			for (int i = 0; i < haystack.Length; i++)
@@ -21,7 +21,7 @@ namespace Solutions
 					}
 				}
 				else
-					return 0;
+					return -1;
 			}
 			return -1;
 		}
