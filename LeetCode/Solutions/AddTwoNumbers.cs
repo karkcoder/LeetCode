@@ -25,9 +25,10 @@
 			{
 				coef = sum % 10;
 			}
-			ListNode result = new ListNode();
+			ListNode result = new ListNode(5);
 
 			SumRecur(l1.next, l2.next, result, coef);
+			return result;
 		}
 
 		public ListNode SumRecur(ListNode l1, ListNode l2, ListNode result, int coef)
@@ -35,6 +36,7 @@
 			if (l1 != null && l1 != null)
 			{
 			}
+			return null;
 
 		}
 	}
