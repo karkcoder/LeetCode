@@ -15,14 +15,12 @@ namespace SolutionsTester
             Assert.Equal(result, sut);
         }
 
-
         [Fact]
         public void _3sumtester()
         {
             var nums = new int[3] { 0, 0, 0 };
 
             var sut = new _3sum().ThreeSum(nums);
-
         }
 
         [Fact]
@@ -47,7 +45,18 @@ namespace SolutionsTester
             int[] theArray = { 1, 3, 5, 7, 9 };
             var result = containsDuplicateTest.ContainsDuplicate(theArray);
             Assert.False(result);
+        }
 
+        [Fact]
+        public void ImplementTrieTest()
+        {
+            Trie trie = new Trie();
+            trie.Insert("hello");
+            var exactWordTest = trie.Search("hel");
+            var prefixWordTest = trie.StartsWith("hel");
+
+            Assert.False(exactWordTest);
+            Assert.True(prefixWordTest);
         }
     }
 }
