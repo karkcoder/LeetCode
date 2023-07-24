@@ -3,7 +3,7 @@
 namespace Solutions
 {
     //217: Contains Duplicate
-    public class ContainsDuplicateSolution
+    public partial class Solution
     {
         public bool ContainsDuplicate(int[] nums)
         {
@@ -16,6 +16,5 @@ namespace Solutions
             }
             return false;
         }
-
     }
 }
