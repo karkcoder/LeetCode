@@ -58,5 +58,13 @@ namespace SolutionsTester
             Assert.False(exactWordTest);
             Assert.True(prefixWordTest);
         }
+
+        [Fact]
+        public void TwoSumTest()
+        {
+            TwoSumSolution ts = new TwoSumSolution();
+            int[] theArray = { 2, 11, 11, 7, 15, 7 };
+            var result = ts.TwoSum(theArray, 9);
+        }
     }
 }
