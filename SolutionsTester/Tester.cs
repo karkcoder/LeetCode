@@ -1,3 +1,4 @@
+using Microsoft.VisualBasic;
 using Solutions;
 using Xunit;
 
@@ -5,14 +6,28 @@ namespace SolutionsTester
 {
     public class Tester
     {
+        private Solution _sut;
+
+        public Tester()
+        {
+            _sut = new Solution();
+        }
+
+        [Fact]
+        public void AnagramTest()
+        {
+            var result = _sut.IsAnagram("anagram", "nagarama");
+            Assert.True(result);
+        }
+
         [Theory]
         [InlineData("abcabcbb", 3)]
         [InlineData("bbbbb", 1)]
         [InlineData("pwwkew", 4)]
         public void LengthOfLongestSubstringSolutionTest(string input, int result)
         {
-            var sut = new LengthOfLongestSubstringSolution().LengthOfLongestSubstring(input);
-            Assert.Equal(result, sut);
+            var value = _sut.LengthOfLongestSubstring(input);
+            Assert.Equal(result, value);
         }
 
         [Fact]
@@ -20,7 +35,7 @@ namespace SolutionsTester
         {
             var nums = new int[3] { 0, 0, 0 };
 
-            var sut = new _3sum().ThreeSum(nums);
+            _sut.ThreeSum(nums);
         }
 
         [Fact]
@@ -34,16 +49,14 @@ namespace SolutionsTester
         [Fact]
         public void StrStrTest()
         {
-            StrStrSolution strtest = new StrStrSolution();
-            strtest.StrStr("aaaaabba", "bba");
+            _sut.StrStr("aaaaabba", "bba");
         }
 
         [Fact]
         public void ContainsDuplicateTest()
         {
-            ContainsDuplicateSolution containsDuplicateTest = new ContainsDuplicateSolution();
             int[] theArray = { 1, 3, 5, 7, 9 };
-            var result = containsDuplicateTest.ContainsDuplicate(theArray);
+            var result = _sut.ContainsDuplicate(theArray);
             Assert.False(result);
         }
 

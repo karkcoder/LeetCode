@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Solutions
 {
-    public class zigzagconversionsolution
+    public partial class Solution
     {
         public string zigzagconversion()
         {
