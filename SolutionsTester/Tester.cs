@@ -13,6 +13,13 @@ namespace SolutionsTester
         }
 
         [Fact]
+        public void ValidParentheses()
+        {
+            var result = _sut.IsValid("()[]{}");
+            Assert.True(result);
+        }
+
+        [Fact]
         public void BestTimeToBuySellStock()
         {
             var result = _sut.MaxProfit(new int[] { 7, 2, 5, 1, 6, 4 });
