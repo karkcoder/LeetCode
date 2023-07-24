@@ -1,4 +1,3 @@
-using Microsoft.VisualBasic;
 using Solutions;
 using Xunit;
 
@@ -11,6 +10,13 @@ namespace SolutionsTester
         public Tester()
         {
             _sut = new Solution();
+        }
+
+        [Fact]
+        public void BestTimeToBuySellStock()
+        {
+            var result = _sut.MaxProfit(new int[] { 7, 2, 5, 1, 6, 4 });
+            Assert.Equal(5, result);
         }
 
         [Fact]
