@@ -1,1 +1,1 @@
-# LeetCode
+# Playground for LeetCode (informal)
