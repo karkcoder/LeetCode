@@ -14,6 +14,13 @@ namespace SolutionsTester
         }
 
         [Fact]
+        public void ValidatePalindome()
+        {
+            var result = _sut.IsPalindrome("A man, a plan, a canal: Panama");
+            Assert.True(result);
+        }
+
+        [Fact]
         public void AnagramTest()
         {
             var result = _sut.IsAnagram("anagram", "nagarama");
