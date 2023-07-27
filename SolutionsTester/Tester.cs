@@ -13,6 +13,16 @@ namespace SolutionsTester
         }
 
         [Fact]
+        public void ReverseLinkedList()
+        {
+            LNode l = new LNode(1, null);
+            l.next = new LNode(2, null);
+            l.next.next = new LNode(3, null);
+
+            var result = _sut.ReverseList(l);
+        }
+
+        [Fact]
         public void ValidParentheses()
         {
             var result = _sut.IsValid("()[]{}");
@@ -36,7 +46,7 @@ namespace SolutionsTester
         [Fact]
         public void AnagramTest()
         {
-            var result = _sut.IsAnagram("anagram", "nagarama");
+            var result = _sut.IsAnagram("anagram", "nagaram");
             Assert.True(result);
         }
 
